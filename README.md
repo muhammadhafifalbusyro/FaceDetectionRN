@@ -3,6 +3,23 @@
 ## Instalation
 
 ### 1.Instalation react-native-vision-camera (Lihat Dokumentasi)
+
+Handling permissionn ketika klik button di halaman sebelumnya
+
+```
+const requestCameraPermission = useCallback(async () => {
+		console.log('Requesting camera permission...')
+		const permission = await Camera.requestCameraPermission()
+		console.log(`Camera permission status: ${permission}`)
+	
+		if (permission === 'denied') await Linking.openSettings()
+		else navigation.navigate('FACE_SCANNER_SCREEN',{permission})
+
+	  }, [])
+
+	const handlerNavigateScanner = () => requestCameraPermission()
+```
+
 ```
 import React, { useState, useRef,useEffect } from 'react';
 import { Text, View, Button, Image } from 'react-native';
