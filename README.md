@@ -354,7 +354,10 @@ const FaceScanner = ({ navigation, route }) => {
 
 export default FaceScanner;
 
-Finishing....
+```
+
+Finishing
+
 ```
 import React, { useState, useRef } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
@@ -547,12 +550,6 @@ const styles = StyleSheet.create({
 export default FaceScanner;
 ```
 
-
-
-
-
-
-```
 
 
 
